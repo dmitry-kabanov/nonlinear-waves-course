@@ -90,7 +90,7 @@ xc = state.grid.x.centers
 
 # You can change anything except the velocity in the interval (3,8)
 pressure_ic = 1. + (xc>1)*(xc<2)* 1000.0
-density_ic = 1.0 - (xc > 3) * (xc < 8) * 0.98
+density_ic = 1.0 - (xc > 7) * (xc < 8) * 0.98
 energy_ic = pressure_ic / (density_ic * (gamma - 1.0))
 
 state.q[density ,:] = density_ic
